@@ -10,7 +10,7 @@
     "test": "nx test",
     "storybook": "nx run ng-mat-rtl:storybook",
     "publish": "nx build ng-mat-rtl && npm publish ./dist/libs/ng-mat-rtl --access=public",
-    "test-storybook": "concurrently --kill-others --timings --success last -n \"SB,TEST\" -c \"magneta,blue\" \"nx run ng-mat-rtl:storybook\" \"wait-on http://localhost:4400 && test-storybook --url http://localhost:4400\""
+    "test-storybook": "concurrently -n \"SB,TEST\" -c \"bgMagenta,bgBlue\" \"nx run ng-mat-rtl:storybook\" \"wait-on http://localhost:4400 && test-storybook --watchAll --url http://localhost:4400\""
   },
   "private": true,
   "dependencies": {
